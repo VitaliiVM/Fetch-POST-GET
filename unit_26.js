@@ -76,11 +76,7 @@ document.querySelector('.b-5').onclick = t5;
 
 
 // Task 6 ============================================
-/*  Отправьте GET запрос (fetch) на сайт http://getpost.itgid.info/index2.php.
- В качестве action укажите 6. Добавьте параметр num1 и num2 содержащие числа.
-  Если все сделано верно, сервер вернет большее число.
-   Не забывайте указывать параметр auth (ключ в чате).
-    Выведите в out-6 результат. Запускаться функция должна по нажатию b-6. */
+
 
 function t6() {
     fetch( "http://getpost.itgid.info/index2.php?auth=DdC33D7d2C2a7&action=6&num1=34&num2=29")
