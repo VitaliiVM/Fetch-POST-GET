@@ -159,22 +159,42 @@ function t10() {
 document.querySelector('.b-10').onclick = t10;
 
 // Task 11 ============================================
-/*  Отправьте POST запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 2. Добавьте параметр name с вашим именем на латинице. Если все сделано верно, сервер пришлет строку hello ваше имя. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-11 результат. Запускаться функция должна по нажатию b-11. */
 
 function t11() {
-
+    fetch("http://getpost.itgid.info/index2.php", {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: 'auth=DdC33D7d2C2a7&action=2&name=Vitalii',
+    })
+        .then(response => response.text())
+        .then(response => {
+            console.log(response);
+            document.querySelector('.out-11').innerHTML = response;
+        })
 }
 
-// ваше событие здесь!!!
+document.querySelector('.b-11').onclick = t11;
 
 // Task 12 ============================================
-/*  Отправьте POST запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 3. Добавьте параметр num1 и num2 содержащие числа. Если все сделано верно, сервер вернет сумму чисел. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-12 результат. Запускаться функция должна по нажатию b-12.*/
 
 function t12() {
-
+    fetch("http://getpost.itgid.info/index2.php", {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: 'auth=DdC33D7d2C2a7&action=3&num1=45&num2=90',
+    })
+        .then(response => response.text())
+        .then(response => {
+            console.log(response);
+            document.querySelector('.out-12').innerHTML = response;
+        })
 }
 
-// ваше событие здесь!!!
+document.querySelector('.b-12').onclick = t12;
 
 // Task 13 ============================================
 /*  Отправьте POST запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 4. Добавьте параметр num1 и num2 содержащие числа. Если все сделано верно, сервер вернет случайное число в заданном диапазоне. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-13 результат. Запускаться функция должна по нажатию b-13.*/
