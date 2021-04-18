@@ -216,10 +216,7 @@ function t13() {
 document.querySelector('.b-13').onclick = t13;
 
 // Task 14 ============================================
-/*  Отправьте POST запрос (fetch) на сайт http://getpost.itgid.info/index2.php.
- В качестве action укажите 5. Если все сделано верно, сервер вернет текущее время и дату.
-  Не забывайте указывать параметр auth (ключ в чате). Выведите в out-14 результат.
-   Запускаться функция должна по нажатию b-14.*/
+
 
 function t14() {
     fetch("http://getpost.itgid.info/index2.php", {
@@ -258,32 +255,69 @@ function t15() {
 document.querySelector('.b-15').onclick = t15;
 
 // Task 16 ============================================
-/*  Отправьте POST запрос (fetch) на сайт http://getpost.itgid.info/index2.php.
- В качестве action укажите 7. Если все сделано верно, сервер случайную ссылку на изображение.
-  Не забывайте указывать параметр auth (ключ в чате). Выведите в out-16 результат.
-   Запускаться функция должна по нажатию b-16. */
 
 function t16() {
-
+    fetch("http://getpost.itgid.info/index2.php", {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: 'auth=DdC33D7d2C2a7&action=7',
+    })
+        .then(response => response.text())
+        .then(response => {
+            console.log(response);
+            document.querySelector('.out-16').innerHTML = `<img src="${response}" style="width: 200px" height="200px">`;
+        })
 }
 
-// ваше событие здесь!!!
+document.querySelector('.b-16').onclick = t16;
 
 // Task 17 ============================================
-/*  Отправьте POST запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 8. В качестве параметра по очереди укажите year равный году вашего рождения. Если все правильно сервер вернет ваш возраст. Не забывайте указывать параметр auth (ключ в чате).Выведите в out-17 результат. Запускаться функция должна по нажатию b-17. */
+/*  Отправьте POST запрос (fetch) на сайт http://getpost.itgid.info/index2.php.
+ В качестве action укажите 8. В качестве параметра по очереди укажите year равный году вашего рождения.
+  Если все правильно сервер вернет ваш возраст.
+   Не забывайте указывать параметр auth (ключ в чате).Выведите в out-17 результат.
+    Запускаться функция должна по нажатию b-17. */
 
 function t17() {
-
+    fetch("http://getpost.itgid.info/index2.php", {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: 'auth=DdC33D7d2C2a7&action=8&year=1992',
+    })
+        .then(response => response.text())
+        .then(response => {
+            console.log(response);
+            document.querySelector('.out-17').innerHTML = response;
+        })
 }
 
-// ваше событие здесь!!!
+document.querySelector('.b-17').onclick = t17;
 
 // Task 18 ============================================
-/*  Отправьте POST запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 9. В качестве параметра по очереди укажите m = 1, d=1, y=1. Если все сделано верно, сервер возвратит дату или месяц или год. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-18 результат. Запускаться функция должна по нажатию b-18. */
+/*  Отправьте POST запрос (fetch) на сайт http://getpost.itgid.info/index2.php.
+ В качестве action укажите 9. В качестве параметра по очереди укажите m = 1, d=1, y=1.
+  Если все сделано верно, сервер возвратит дату или месяц или год.
+   Не забывайте указывать параметр auth (ключ в чате). Выведите в out-18 результат.
+   Запускаться функция должна по нажатию b-18. */
 
 function t18() {
-
+    fetch("http://getpost.itgid.info/index2.php", {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: 'auth=DdC33D7d2C2a7&action=9&m=1&d=1&y=1',
+    })
+        .then(response => response.text())
+        .then(response => {
+            console.log(response);
+            document.querySelector('.out-18').innerHTML = response;
+        })
 }
 
-// ваше событие здесь!!!
+document.querySelector('.b-18').onclick = t18;
 
