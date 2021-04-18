@@ -101,7 +101,7 @@ function t7() {
             return data.text()
         })
         .then(data => {
-            document.querySelector('.out-7').innerHTML += `<img src="${data}" style="width: 200px" height="200px">`;
+            document.querySelector('.out-7').innerHTML = `<img src="${data}" style="width: 200px" height="200px">`;
         })
 }
 
